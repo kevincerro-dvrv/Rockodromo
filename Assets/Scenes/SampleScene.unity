@@ -439,7 +439,7 @@ MonoBehaviour:
       m_Name: Is Tracked
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: eaff21b6-20d3-4099-b55b-85b212d27165
+      m_Id: aba9ab2a-9064-4322-a1ae-521f9338443a
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -535,7 +535,7 @@ MonoBehaviour:
       m_Name: UI Scroll
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: adcc0852-b41c-4fcd-8114-1a7f34d53a3d
+      m_Id: 1e8cdb22-8b58-4189-aac1-5d37a229a50d
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -571,7 +571,7 @@ MonoBehaviour:
       m_Name: Directional Anchor Rotation
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: f3785ba2-66f5-45b6-89cc-2da1fc6780c8
+      m_Id: 83021d5a-5d8a-482b-87f2-3855a99c66a2
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -595,7 +595,7 @@ MonoBehaviour:
       m_Name: Scale Toggle
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 7f3fb8cc-38cd-4369-ab95-6de6a665a047
+      m_Id: 62639cab-a612-4ded-9d19-0d8b3932db5e
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -607,7 +607,7 @@ MonoBehaviour:
       m_Name: Scale Delta
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 074754eb-7c0f-476f-8a7f-2c3a29e73847
+      m_Id: 63e35b6c-f46f-4908-b02c-a99201914f45
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -644,9 +644,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 85430771}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a252c846eccd814c852b3eda2aac9f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 520f7a071c493354da47e9ebbbd06f21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  handCotrollerVelocityProperty:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Hand Cotroller Velocity Property
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 0e183ae6-d93f-4351-ae60-6321a26e6182
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -8582645894730830684, guid: e898ea6f24a588f49bbbbc08650f8a0d, type: 3}
 --- !u!1 &129550159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1795,7 +1807,6 @@ MonoBehaviour:
   m_AutoDeselect: 0
   m_TimeToAutoDeselect: 3
   m_EnableUIInteraction: 1
-  m_BlockUIOnInteractableSelection: 1
   m_AllowAnchorControl: 1
   m_UseForceGrab: 1
   m_RotateSpeed: 180
@@ -1863,7 +1874,7 @@ MonoBehaviour:
       m_Name: Is Tracked
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: ca5cfd44-96e8-47d1-8576-b2a659f99b36
+      m_Id: e0689ee4-7720-4596-94b1-8dcb3b8aa59c
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1959,7 +1970,7 @@ MonoBehaviour:
       m_Name: UI Scroll
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 0e981d60-ee02-4147-80e5-edd38b22cbf1
+      m_Id: 85190fe5-b1b3-45f3-81e7-4f0f46900e5d
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1995,7 +2006,7 @@ MonoBehaviour:
       m_Name: Directional Anchor Rotation
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 6c02ab12-dd0d-46df-aff2-931f04d4069d
+      m_Id: 556ae912-dee0-4ff9-a269-49264d778ddd
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2019,7 +2030,7 @@ MonoBehaviour:
       m_Name: Scale Toggle
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: a7c2b8a8-16fb-40be-9580-1e76081cccb2
+      m_Id: fd03c3c7-fa6e-47dd-b861-db6e319710a3
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2031,7 +2042,7 @@ MonoBehaviour:
       m_Name: Scale Delta
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 275e5f0b-abcc-4718-b13d-4dcc127ac287
+      m_Id: 9b34add5-7e4a-4b32-a767-74c3475adea5
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3004,6 +3015,7 @@ GameObject:
   - component: {fileID: 579862866}
   - component: {fileID: 579862868}
   - component: {fileID: 579862869}
+  - component: {fileID: 579862870}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -3053,13 +3065,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 579862865}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeb75d21634c98747b2bc4773f289145, type: 3}
+  m_Script: {fileID: 11500000, guid: 64ccd76f6ef4de24896384b21e50609d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  climbingHand: {fileID: 0}
-  secondaryHand: {fileID: 0}
-  climbingHandVelocimeter: {fileID: 0}
-  characterController: {fileID: 579862869}
+  locomotionSystem: {fileID: 1910634242}
 --- !u!143 &579862869
 CharacterController:
   m_ObjectHideFlags: 0
@@ -3086,6 +3095,49 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &579862870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579862865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf296fc962d7184ab14ad1841598d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 0}
+  m_MoveSpeed: 1
+  m_EnableStrafe: 1
+  m_EnableFly: 0
+  m_UseGravity: 1
+  m_GravityApplicationMode: 0
+  m_ForwardSource: {fileID: 0}
+  m_LeftHandMoveAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Left Hand Move
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: 329c583c-4a32-472a-b131-a402d6d4719e
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_RightHandMoveAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Hand Move
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: 277ac279-30a6-4b98-a291-4b546b8aaa85
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!1 &617337797
 GameObject:
   m_ObjectHideFlags: 0
@@ -3824,7 +3876,6 @@ GameObject:
   - component: {fileID: 870643211}
   - component: {fileID: 870643212}
   - component: {fileID: 870643213}
-  - component: {fileID: 870643214}
   m_Layer: 0
   m_Name: ClimbKnob
   m_TagString: Untagged
@@ -3978,158 +4029,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &870643214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870643210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
-  m_Colliders: []
-  m_InteractionLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_InteractionLayers:
-    m_Bits: 1
-  m_DistanceCalculationMode: 1
-  m_SelectMode: 0
-  m_FocusMode: 1
-  m_CustomReticle: {fileID: 0}
-  m_AllowGazeInteraction: 0
-  m_AllowGazeSelect: 0
-  m_OverrideGazeTimeToSelect: 0
-  m_GazeTimeToSelect: 0.5
-  m_OverrideTimeToAutoDeselectGaze: 0
-  m_TimeToAutoDeselectGaze: 3
-  m_AllowGazeAssistance: 0
-  m_FirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FirstSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FirstFocusEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastFocusExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FocusEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FocusExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Activated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Deactivated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_StartingHoverFilters: []
-  m_StartingSelectFilters: []
-  m_StartingInteractionStrengthFilters: []
-  m_OnFirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnLastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectCanceled:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnActivate:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnDeactivate:
-    m_PersistentCalls:
-      m_Calls: []
-  m_AttachTransform: {fileID: 0}
-  m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
-  m_MatchAttachPosition: 1
-  m_MatchAttachRotation: 1
-  m_SnapToColliderVolume: 1
-  m_ReinitializeDynamicAttachEverySingleGrab: 1
-  m_AttachEaseInTime: 0.15
-  m_MovementType: 2
-  m_VelocityDamping: 1
-  m_VelocityScale: 1
-  m_AngularVelocityDamping: 1
-  m_AngularVelocityScale: 1
-  m_TrackPosition: 1
-  m_SmoothPosition: 0
-  m_SmoothPositionAmount: 8
-  m_TightenPosition: 0.1
-  m_TrackRotation: 1
-  m_SmoothRotation: 0
-  m_SmoothRotationAmount: 8
-  m_TightenRotation: 0.1
-  m_TrackScale: 1
-  m_SmoothScale: 0
-  m_SmoothScaleAmount: 8
-  m_TightenScale: 0.1
-  m_ThrowOnDetach: 1
-  m_ThrowSmoothingDuration: 0.25
-  m_ThrowSmoothingCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  m_ThrowVelocityScale: 1.5
-  m_ThrowAngularVelocityScale: 1
-  m_ForceGravityOnDetach: 0
-  m_RetainTransformParent: 1
-  m_AttachPointCompatibilityMode: 0
-  m_StartingSingleGrabTransformers: []
-  m_StartingMultipleGrabTransformers: []
-  m_AddDefaultGrabTransformers: 1
 --- !u!1 &890599404
 GameObject:
   m_ObjectHideFlags: 0
@@ -4494,7 +4393,7 @@ MonoBehaviour:
       m_Name: 
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 1fb1c586-7eba-4784-bb2d-4dacbb9c213b
+      m_Id: ee1f9dec-f8dc-4f52-a2bf-8e5a238ad4b7
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -5128,7 +5027,6 @@ MonoBehaviour:
   m_AutoDeselect: 0
   m_TimeToAutoDeselect: 3
   m_EnableUIInteraction: 1
-  m_BlockUIOnInteractableSelection: 1
   m_AllowAnchorControl: 1
   m_UseForceGrab: 1
   m_RotateSpeed: 180
@@ -5196,7 +5094,7 @@ MonoBehaviour:
       m_Name: Is Tracked
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: b4df9477-cc2c-4e03-8cc7-52c33bf7534d
+      m_Id: 0a4dabe0-bc49-456b-8162-bc06a4d8d255
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -5292,7 +5190,7 @@ MonoBehaviour:
       m_Name: UI Scroll
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: e88c005d-3df5-4779-a0a8-522ecadbfd2b
+      m_Id: 52814051-fa00-4fc3-b537-41e5486f544b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -5328,7 +5226,7 @@ MonoBehaviour:
       m_Name: Directional Anchor Rotation
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: e1fe1c82-37b9-4d08-bbef-04b7aba4e620
+      m_Id: b53a6d11-f115-41da-a4a6-1d40cbe1f456
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -5352,7 +5250,7 @@ MonoBehaviour:
       m_Name: Scale Toggle
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 5c6b3f9b-6a5b-4b94-a7a4-0ccc5c13c066
+      m_Id: dadecaaa-a375-4fbe-aa53-54f99cbf8339
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -5364,7 +5262,7 @@ MonoBehaviour:
       m_Name: Scale Delta
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 03fabc40-7c50-4923-b4d5-0b399e401229
+      m_Id: 60f92056-4253-4a03-8148-c0cd2988177b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -5566,6 +5464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionAssets:
   - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  - {fileID: -944628639613478452, guid: e898ea6f24a588f49bbbbc08650f8a0d, type: 3}
 --- !u!4 &1111361433
 Transform:
   m_ObjectHideFlags: 0
@@ -8238,7 +8137,7 @@ MonoBehaviour:
       m_Name: Is Tracked
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 5bc615b8-99af-4aa0-8ddb-5e166bd21f69
+      m_Id: 37ea0f3e-9d30-45a4-a40f-e713c03a938a
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8334,7 +8233,7 @@ MonoBehaviour:
       m_Name: UI Scroll
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: da7e6d11-8204-451c-8fe7-cc176c0124d7
+      m_Id: a8a42f64-e665-474e-93df-5257586a6730
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8370,7 +8269,7 @@ MonoBehaviour:
       m_Name: Directional Anchor Rotation
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 11ec3e84-d847-4774-aed3-cbefb2692f7c
+      m_Id: c9a8e15d-9a3b-493f-af83-19be5e60e2d9
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8394,7 +8293,7 @@ MonoBehaviour:
       m_Name: Scale Toggle
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 0c21ee27-6155-4e89-ba9b-ef37549b63fa
+      m_Id: 4123da8d-b5d5-4aac-9216-7056366968d3
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8406,7 +8305,7 @@ MonoBehaviour:
       m_Name: Scale Delta
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: c5278ba3-9154-4fa8-93b7-5a1d47009f15
+      m_Id: f9ab21c0-b81a-4880-aed4-dcc29bc3f8e6
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8443,9 +8342,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1719046367}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a252c846eccd814c852b3eda2aac9f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 520f7a071c493354da47e9ebbbd06f21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  handCotrollerVelocityProperty:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Hand Cotroller Velocity Property
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: e84f36b3-4f1d-4a1c-8d38-71c491b293d5
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -5491393525025412883, guid: e898ea6f24a588f49bbbbc08650f8a0d, type: 3}
 --- !u!1 &1728704466
 GameObject:
   m_ObjectHideFlags: 0
@@ -9158,6 +9069,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1910634241}
   - component: {fileID: 1910634240}
+  - component: {fileID: 1910634242}
   m_Layer: 0
   m_Name: XR Interaction Manager
   m_TagString: Untagged
@@ -9194,6 +9106,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1910634242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910634239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a5df2202a8b96488c744be3bd0c33e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Timeout: 10
+  m_XROrigin: {fileID: 579862866}
 --- !u!1 &1965678733
 GameObject:
   m_ObjectHideFlags: 0

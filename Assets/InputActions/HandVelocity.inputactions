@@ -1,0 +1,54 @@
+{
+    "name": "HandVelocity",
+    "maps": [
+        {
+            "name": "HandVelocity",
+            "id": "d33f6c74-117c-4ee2-b225-70c74595ee2a",
+            "actions": [
+                {
+                    "name": "LeftHandVelocity",
+                    "type": "Value",
+                    "id": "0c497551-c21e-43ad-92d4-a1acae16d45d",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "RightHandVelocity",
+                    "type": "Value",
+                    "id": "c6764523-8798-4944-97fe-fed6574ada30",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4a7d34d6-3988-44a5-b315-3083f89cdb00",
+                    "path": "<OculusTouchController>{LeftHand}/deviceVelocity",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftHandVelocity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5679f1a5-98cf-43e7-ad51-51e70a8ac831",
+                    "path": "<OculusTouchController>{RightHand}/deviceVelocity",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightHandVelocity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

@@ -1,23 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class Velocimeter : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class Velocimeter : MonoBehaviour {
+    public InputActionProperty handCotrollerVelocityProperty;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public Vector3 GetVelocity()
-    {
-        return Vector3.down;
+    public Vector3 GetVelocity() {
+        return handCotrollerVelocityProperty.action.ReadValue<Vector3>();
     }
 }

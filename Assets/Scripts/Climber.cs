@@ -3,46 +3,74 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class Climber : MonoBehaviour
-{
-    public ActionBasedController climbingHand;
-    public ActionBasedController secondaryHand;
+public class Climber : MonoBehaviour {
+    public LocomotionSystem locomotionSystem;
 
-    public Velocimeter climbingHandVelocimeter;
+    ActionBasedController climbingHand;
+    ActionBasedController secondaryHand;
 
-    public CharacterController characterController;
+    Velocimeter climbingHandVelocimeter;
+
+    CharacterController charController;
+
+    Vector3 velocity;
+
+    float terminalSpeed = 60f;
+    float sqrTerminalSpeed;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        characterController = GetComponent<CharacterController>();
+    void Start() {
+        charController = GetComponent<CharacterController>();  
+        sqrTerminalSpeed = terminalSpeed * terminalSpeed;
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (climbingHandVelocimeter != null) {
-            characterController.Move(climbingHandVelocimeter.GetVelocity() * Time.deltaTime * -1);
+    void Update() {
+        if(climbingHandVelocimeter != null) {
+            charController.Move( - climbingHandVelocimeter.GetVelocity() * Time.deltaTime);
+        } else {
+            velocity += Physics.gravity * Time.deltaTime;
+            //Limitamos a velocidade de caída á terminalSpeed.
+            //Deste xeito evitamos a posibilidade de atravesar o chan por caer demasiado rápido
+            float sqrSpeed = velocity.sqrMagnitude;
+            if(sqrSpeed > sqrTerminalSpeed) {
+                velocity = velocity.normalized * terminalSpeed;
+            }
+            charController.Move(velocity * Time.deltaTime);
+
+            if(charController.isGrounded) {
+                velocity = Vector3.zero;
+            }
         }
+        
     }
 
-    public void SetClimbingHand(MonoBehaviour interactor, bool grab)
-    {
-        if (grab) {
+
+    public void SetClimbingHand(MonoBehaviour interactor, bool grab) {
+        // Se o evento é un agarre, basta pasar a climbingHand a o papel secundario
+        // e poñer a man do novo agarre como principal
+        if(grab) {
             secondaryHand = climbingHand;
             climbingHand = interactor.GetComponent<ActionBasedController>();
             climbingHandVelocimeter = climbingHand.GetComponent<Velocimeter>();
+            locomotionSystem.enabled =false;
         } else {
-            if (secondaryHand == null) {
+            //Se o evento é soltar unha man, o primeiro é mirar se hai secondaryHand ou non
+            if(secondaryHand == null) {
+                velocity = - climbingHandVelocimeter.GetVelocity();
                 climbingHand = null;
                 climbingHandVelocimeter = null;
-            } else if (secondaryHand.name == interactor.name) {
+                locomotionSystem.enabled = true;
+            } else if(secondaryHand.name == interactor.name) {
+                //A man que se soltou é a secundaria, nos esquecemos dela sen ter que facer nada máis
                 secondaryHand = null;
             } else {
+                //A man que se soltou é a primaria, a secundaria pasa ó seu papel
                 climbingHand = secondaryHand;
-                climbingHandVelocimeter = climbingHand.GetComponent<Velocimeter>();
                 secondaryHand = null;
+                climbingHandVelocimeter = climbingHand.GetComponent<Velocimeter>();
             }
         }
+
     }
 }
